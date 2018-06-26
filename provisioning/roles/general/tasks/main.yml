@@ -1,0 +1,19 @@
+---
+
+#- name: Update apt cache  #title show ra cho coi
+#  command: apt update
+
+- name: Install NGINX web server
+#  apt: name=nginx state=present
+  apt:
+    name: nginx
+    state: present
+    update_cache: yes
+
+
+
+- name: Install htop
+#  apt: name=nginx state=present
+  apt:
+    name: htop
+    state: present
